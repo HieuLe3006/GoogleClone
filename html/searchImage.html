@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Image Search</title>
+    </head>
+    <style>
+        input[type=text]{
+            position: fixed;
+            border-radius: 25px;
+            border-width: medium;
+            border: 2px solid  #d2d2d2;
+            outline: none;
+            top: 40%;
+            left: 34.5%;
+            width: 33%;
+            height: 4%;
+            text-indent: 8%;
+        }
+
+        .logo{
+            position: fixed;
+            left: 51%;
+            top: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .search_image{
+            position: fixed;
+            top: 40.65%;
+            width: 1.5%;
+            left: 35.4%;
+        }
+
+        .button_hidden{
+            visibility: hidden;
+        }
+
+        .button{
+            float: right;
+            padding: 0;
+            border: none;
+            background: none;
+            text-decoration: none;
+        }
+
+        .image{
+            position: fixed;
+            top: 2.5%;
+            right: 3%;
+        }
+
+        .advance{
+            position: fixed;
+            top: 2.5%;
+            right: 7.5%;
+        }
+    </style>
+    <body>
+        <form action="https://images.google.com/images">
+            <input type="text" name="q">
+            <input type="submit" value="Google Search" class="button_hidden">
+        </form>
+
+        <img src="../images/images.png" class="logo">
+        <img src="../images/png-transparent-computer-icons-magnifying-glass-magnifier-symbol-magnifying-glass.png" class="search_image">
+
+        <ul class = "button", style = "color: rgb(0, 0, 0)">
+            <a href="searchAdvancedGG.html" class="button image">Advance</a>
+            <a href="../index.html" class="button advance">Google</a>
+        </ul>
+            
+    </body>
+</html>

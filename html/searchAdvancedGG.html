@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Advanced Search</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+        <style>
+            /*
+            input [name="as_q"]{
+                position: absolute;
+            }
+
+            input[name="as_epq"]{
+                position: relative;
+            }
+
+            input[name="as_oq"]{
+                position: relative;
+            }
+            */
+            .normal_text{
+                grid-area: normalText;
+                justify-self: end;
+                /*margin: 0px 0px 25px;*/
+            }
+
+            .description{
+                font-size:12px;
+                font-weight: light;
+                /*margin: 0px 1.5% 26px 1.5%;*/
+                grid-area: Description;
+            }
+
+            li{
+                list-style-type: None;
+                /*margin: 0 1.5% 24px 1.5%;*/
+            }
+
+            .row{
+                display: grid;
+                grid-template-areas: 
+                    'Title . . TD TD'
+                    'normalText inputText inputText Description Description';
+
+                clear: both;
+                grid-gap: 5%;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(3, 1fr);    
+            }
+
+            /*
+            .content>.normal-text{
+                background-color: rgba(255, 0, 0, 0.8);
+                grid-gap: 50%;
+                padding: 20px 0;
+            }
+
+            .content>.description{
+                background-color: rgba(87, 47, 196, 0.8);
+                grid-gap: 50%;
+                padding: 20px 0;
+            }
+
+            .content>#Todo{
+                background-color: rgba(82, 196, 47, 0.8);
+                grid-gap: 50%;                grid-template-rows: repeat(3, 1fr);    
+                padding: 20px 0;
+            }
+
+            .content>#title{
+                background-color: rgba(255, 187, 0, 0.8);
+                grid-gap: 50%;
+                padding: 20px 0;
+            }
+            */
+
+            .input_text{
+                display: table-cell;
+                position: relative; 
+                margin: 0 0 1.5% 0;
+                float: left;
+                padding: 0.5%;
+                grid-area: inputText;
+            }   
+
+            input[type="text"]{
+                width: 100%;
+                margin: 0 0 2% 0;
+            }
+
+            .title{
+                font-size: 18px;
+                grid-area: Title;
+                align-self: end;
+                justify-self: end;
+            }
+
+            .ToDo{
+                font-size: 15px;
+                font-weight: bold;
+                grid-area: TD;
+                align-self: end;
+            }
+
+            .button{
+                position: relative;
+                float: right;
+                padding: 0;
+                border: none;
+                background: none;
+                margin: 1% 2.5% 0 0;
+                text-decoration: none;
+            }
+
+            .search_button{
+                grid-area: searchButton;
+                float: right;
+            }
+
+            input[type="submit"]{
+                background-color: #4c8bf5;
+                color: white;
+                border: none;
+                padding: 1.2%;
+            }
+
+            #normal_text > *{
+                font-size: 14px;
+                font-family: 'Roboto', sans-serif;
+                margin: 0 0 9% 0;
+            }
+
+            #description > *{
+                margin: 0 0 3% 0;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- <form action="https://google.com/search">
+            <input type="text" name="q">
+            <input type="submit" value="Google Search">
+        </form> -->
+
+        <h1 style="color: #ea4335; font-size: 25px; padding-left: 20px; float: left; margin: 1% 0 0 0;">Advanced Search</h1>
+
+        <a href="searchImage.html" class="button">Images</a>
+        <a href="../index.html" class="button">Google</a>
+
+        <div class="row content">
+            <div class="title">Find pages with...</div>
+            
+            <div class="normal_text">
+                <ul id="normal_text">                
+                    <li>all these words:</li>
+                    <li>this exact word or phrase:</li>
+                    <li>any of these words:</li>
+                    <li>none of these words:</li>
+                </ul>
+            </div>  
+            
+            <div class="ToDo">To do this in the search box.</div>
+
+            <div class="description">
+                <ul id="description">
+                    <li>Type the important words: <span style="font-family: system-ui; font-size: 12px;">tri-colour rat terrier</span></li>
+                    <li>Put exact words in quotes: <span style="font-family: system-ui; font-size: 12px;">"rat terrier"</span></li>
+                    <li>Type OR between all the words you want: <span style="font-family: system-ui; font-size: 12px;">miniature OR standard</span></li>
+                    <li>Put a minus sign just before words that you don't want: <span style="font-family: system-ui; font-size: 12px;">-rodent, -"Jack Russell"</span></li>
+                </ul>
+            </div>
+
+            <form action="https://google.com/search" class="input_text">
+                <input type="text" name="as_q" id="field1">
+                <input type="text" name="as_epq" id="field2">
+                <input type="text" name="as_oq" id="field3">
+                <input type="text" name="as_eq" id="field4">
+                <input type="submit" value="Advanced Search" class="search_button">               
+            </form>
+        </div>
+
+    </body>
+</html>
